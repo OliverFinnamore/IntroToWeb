@@ -1,0 +1,23 @@
+<HTML>
+<BODY>
+    <!-- Input creates something for the user to put data into -->
+    <input id="name-input" type="text" placeholder="Enter your name" />
+    <!--The button is what the input type is and the type is a button for users to press -->
+    <button id="my-button">Click Me</button>
+    <!--An element to transfer it to javascript, aka where you put code-->
+    <script>
+    //creates a variabe for myButton from the id of buttton from the html code
+      var myButton = document.querySelector('#my-button');
+    //creates a variable for nameInput from the HTML code
+      var nameInput = document.querySelector('#name-input');
+    // Adds the method addEventListener() to the variable myButton which tells code an event will be put in
+      myButton.addEventListener('click', function () {
+        //creates an if statement that executes if you add text
+        if (nameInput.value !== '') {
+            //Shows text that says hello and the whatever is inputed by the user
+          alert('Hello ' + nameInput.value);
+        }
+      });
+    </script>
+</BODY>
+</HTML>
